@@ -12,7 +12,7 @@ This article compares these two approaches to help you decide which is best for 
 In a **layered architecture**, the codebase is divided by technical responsibilities. Each layer represents a different concern, such as presentation, business logic, and data access. These layers often correspond to the **MVC** (Model-View-Controller) paradigm or similar patterns.
 
 ### Example: Layered Architecture Structure
-\`\`\`plaintext
+```
 project/
 ├── controllers/
 │   ├── user_controller.go
@@ -32,7 +32,7 @@ project/
 │   ├── order.go
 └── utils/
     └── logger.go
-\`\`\`
+```
 
 ---
 
@@ -41,7 +41,7 @@ project/
 In **feature-based organization**, code is grouped by business domain or feature rather than technical layer. Each feature (e.g., users, products, orders) has its own self-contained folder containing everything it needs: controllers, services, repositories, and models.
 
 ### Example: Feature-Based Structure
-\`\`\`plaintext
+```
 project/
 ├── users/
 │   ├── user_controller.go
@@ -64,7 +64,7 @@ project/
 └── shared/
     ├── logger.go
     └── database.go
-\`\`\`
+```
 
 ---
 
@@ -145,7 +145,7 @@ Many real-world projects adopt a **hybrid approach** that combines the strengths
 - Use a shared folder for cross-cutting concerns like logging, authentication, or database utilities.
 
 ### Example:
-\`\`\`plaintext
+```
 project/
 ├── users/
 ├── products/
@@ -154,7 +154,7 @@ project/
     ├── middleware/
     ├── logger.go
     └── database.go
-\`\`\`
+```
 
 This approach balances modularity and maintainability while addressing cross-cutting concerns effectively.
 
